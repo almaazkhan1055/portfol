@@ -12,12 +12,10 @@
     left: 0;
     top: 0;
     bottom: 0;
-    width: 400px;
+    width: 100%;
     background: linear-gradient(180deg, #0c0c1d, #20206b);
     color: white;
-    @include mobile {
-      width: 200px;
-    }
+
     .links {
       position: absolute;
       display: flex;
