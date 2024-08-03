@@ -6,7 +6,7 @@
   display: flex;
   // justify-content: space-between;
   align-items: center;
-  gap: 50px;
+  // gap: 50px;
   @include mobile {
     flex-direction: column;
     width: 100%;
@@ -53,43 +53,10 @@
       }
     }
     .phone-svg {
-      // top: 0;
-      // left: 0;
       position: absolute;
       margin: auto;
-      stroke: orange;
+      stroke: rebeccapurple;
       z-index: -1;
-      @include mobile {
-      }
-    }
-    form {
-      display: flex;
-      flex-direction: column;
-      gap: 16px;
-      input,
-      textarea {
-        cursor: pointer;
-        padding: 16px;
-        border: 1px solid white;
-        border-radius: 5px;
-        color: #fff;
-        background: transparent;
-        @include mobile {
-          padding: 10px;
-        }
-      }
-      button {
-        padding: 16px;
-        font-weight: bold;
-        background-color: orange;
-        cursor: pointer;
-        font-size: 16px;
-        border: none;
-        border-radius: 5px;
-        @include mobile {
-          padding: 10px;
-        }
-      }
     }
   }
 }

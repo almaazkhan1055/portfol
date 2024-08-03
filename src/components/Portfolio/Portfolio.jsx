@@ -1,48 +1,86 @@
 import React, { useRef } from "react";
 import "./Portfolio.scss";
 import { useScroll, motion, useSpring, useTransform } from "framer-motion";
-import shopImg from "../../../public/Screenshot (9).png";
-import moviesFlixx from "../../../public/MoviesFlixx.png";
-import ecomm from "../../../public/Ecommerce.png";
-import tejasEngineering from "../../../public/Screenshot (12).png";
-import twoGood from "../../../public/twoGood.png";
+import pic1 from "../../assets/pic1.jpeg";
+import pic2 from "../../assets/pic2.jpeg";
+import pic3 from "../../assets/pic3.jpeg";
+import pic4 from "../../assets/pic4.jpeg";
+import pic5 from "../../assets/pic5.jpeg";
+import pic6 from "../../assets/pic6.jpeg";
+import pic7 from "../../assets/pic7.jpeg";
+import pic8 from "../../assets/pic8.jpeg";
+import pic9 from "../../assets/pic9.jpeg";
+import pic10 from "../../assets/pic10.jpeg";
+import pic11 from "../../assets/pic11.jpeg";
+import pic12 from "../../assets/pic12.jpeg";
+import pic13 from "../../assets/pic13.jpeg";
+import pic14 from "../../assets/pic14.jpeg";
+import pic15 from "../../assets/pic15.jpeg";
+import pic16 from "../../assets/pic16.jpeg";
+import pic17 from "../../assets/pic17.jpeg";
+import pic18 from "../../assets/pic18.jpeg";
+import pic19 from "../../assets/pic19.jpeg";
+
 const items = [
   {
-    demo: "https://movie-flixx-chi.vercel.app/#",
-    id: 1,
-    img: moviesFlixx,
-    desc: "Experience the great outdoors with Aurora Group Camping! Nestled in the heart of nature, our campgrounds offer an escape from the hustle and bustle of city life. Whether you're a seasoned camper or new to the adventure, we have everything you need for an unforgettable outdoor experience.",
-    title: "MoviesFlixx--(Vite + React)",
+    img: pic1,
   },
   {
-    demo: "https://ecommerce-c416l2yiu-khanalmaaz1055-gmailcoms-projects.vercel.app/#",
-    id: 2,
-    img: ecomm,
-    desc: "Empowering businesses with innovative solutions through Next.js. Crafting seamless user experiences and scalable applications for the engineering sector. Let's build the future of technology together.",
-    title: "ECommerce--(Vite + React)",
+    img: pic2,
   },
   {
-    demo: "https://tejasengineeringworks.co.in/#",
-    id: 3,
-    img: tejasEngineering,
-    desc: "Welcome to my portfolio! I'm a skilled web developer with expertise in Vite, Framer Motion, and React. Explore my projects showcasing innovative designs and seamless user experiences. Contact me to discuss how I can bring your web development ideas to life.",
-    title: "Tejas Engineering--(Next js)",
+    img: pic3,
   },
   {
-    demo: "https://cashncarry.netlify.app/#",
-    id: 4,
-    img: shopImg,
-    desc: "Dive into my clothing shop project, where HTML structures, CSS styles, and JavaScript functionalities converge to redefine online fashion retailing. Elevate user experiences, streamline navigation, and showcase the latest trends effortlessly.",
-    title: "Cash&Carry--(HTML CSS JAVASCRIPT)",
+    img: pic4,
   },
   {
-    demo: "https://two-good-co-seven.vercel.app/#",
-    id: 5,
-    img: twoGood,
-    desc: "Dive into my clothing shop project, where HTML structures, CSS styles, and JavaScript functionalities converge to redefine online fashion retailing. Elevate user experiences, streamline navigation, and showcase the latest trends effortlessly.",
-    title: "TwoGood.co--(HTML CSS JAVASCRIPT)",
+    img: pic5,
+  },
+  {
+    img: pic6,
+  },
+  {
+    img: pic7,
+  },
+  {
+    img: pic8,
+  },
+  {
+    img: pic9,
+  },
+  {
+    img: pic10,
+  },
+  {
+    img: pic11,
+  },
+  {
+    img: pic12,
+  },
+  {
+    img: pic13,
+  },
+  {
+    img: pic14,
+  },
+  {
+    img: pic15,
+  },
+  {
+    img: pic16,
+  },
+  {
+    img: pic17,
+  },
+  {
+    img: pic18,
+  },
+  {
+    img: pic19,
   },
 ];
+
 const SingleSection = ({ item }) => {
   const ref = useRef();
   const { scrollYProgress } = useScroll({
@@ -56,13 +94,6 @@ const SingleSection = ({ item }) => {
           <div className="ImageContainer" ref={ref}>
             <img src={item.img}></img>
           </div>
-          <motion.div className="textContainer" style={{ y }}>
-            <h2>{item.title}</h2>
-            <p>{item.desc}</p>
-            <a href={item.demo} target="_new">
-              <button>Have a look</button>
-            </a>
-          </motion.div>
         </div>
       </div>
     </section>
@@ -81,9 +112,9 @@ const Portfolio = () => {
         <h1>Featured Works</h1>
         <motion.div className="progress-bar" style={{ scaleX }}></motion.div>
       </div>
-      {items.map((item) => {
-        return <SingleSection key={item.id} item={item} />;
-      })}
+      {items.map((item, index) => (
+        <SingleSection key={index} item={item} />
+      ))}
     </div>
   );
 };

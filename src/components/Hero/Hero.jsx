@@ -1,5 +1,6 @@
 import "./Hero.scss";
 import { motion } from "framer-motion";
+import pic1 from "../../assets/pic1.jpeg";
 const textVariants = {
   initial: {
     x: -500,
@@ -47,13 +48,17 @@ const Hero = () => {
           initial="initial"
           animate="animate"
         >
-          <motion.h2 variants={textVariants}>Almaaz Ahmed Khan</motion.h2>
-          <motion.h1 variants={textVariants}>
-            Front-end Developer(React.js)
+          <motion.h2 variants={textVariants}>
+            <motion.b whileHover={{ color: "#ff48a5" }}>Balloons </motion.b>
+            Nation
+          </motion.h2>
+          <motion.h1 variants={textVariants} whileHover={{ color: "#ff48a5" }}>
+            A premier balloon decoration company
           </motion.h1>
+
           <motion.div className="buttons" variants={textVariants}>
             <motion.button variants={textVariants}>
-              See the Latest Works
+              See our Latest Works
             </motion.button>
             <motion.button variants={textVariants}>Contact Me</motion.button>
           </motion.div>
@@ -69,9 +74,8 @@ const Hero = () => {
           animate="animate"
           initial="initial"
         >
-          Web Developer Content Creator
+          A BALLOON DECORATION COMPANY
         </motion.div>
-        <div className="heroImage">{/* <img src="./hero.png"></img> */}</div>
       </div>
     </div>
   );

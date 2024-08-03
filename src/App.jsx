@@ -7,7 +7,6 @@ import Contact from "./components/Contact/Contact";
 import Cursor from "./components/Cursor/Cursor";
 import Parallax from "./components/Parallax/Parallax";
 const App = () => {
-  console.log("hiii");
   return (
     <div>
       <Cursor />
@@ -22,7 +21,7 @@ const App = () => {
       <section>
         <Services />
       </section>
-      <section id="Portfolio">
+      <section id="works">
         <Parallax type="portfolio" />
       </section>
       <Portfolio />

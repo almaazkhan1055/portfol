@@ -1,13 +1,9 @@
 import { useRef, useEffect, useState } from "react";
 import "./Services.scss";
 import { animate, motion, useInView } from "framer-motion";
-import Slider from "react-slick";
+
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import htmlLogo from "../../../public/IMG_5341-removebg-preview.png";
-import cssLogo from "../../../public/css-removebg-preview.png";
-import jsLogo from "../../../public/IMG_5340-removebg-preview.png";
-import reactLogo from "../../../public/IMG_5357-removebg-preview.png";
 
 const variants = {
   initial: { x: -500, y: 100, opacity: 0 },
@@ -21,25 +17,6 @@ const variants = {
     },
   },
 };
-
-const BoxData = [
-  {
-    title: "HTML",
-    desc: htmlLogo,
-  },
-  {
-    title: "CSS",
-    desc: cssLogo,
-  },
-  {
-    title: "JAVASCRIPT",
-    desc: jsLogo,
-  },
-  {
-    title: "REACT",
-    desc: reactLogo,
-  },
-];
 
 const Services = () => {
   const ref = useRef();
@@ -70,29 +47,37 @@ const Services = () => {
     >
       <motion.div className="textContainer" variants={variants}>
         <p>
-          I focus on helping your brand grow <br />
-          and move forward
+          We focus on helping your event stand out with
+          <br />
+          stunning balloon displays.
         </p>
         <hr />
       </motion.div>
       <motion.div className="titleContainer" variants={variants}>
         <div className="title">
-          <img src="/people.webp" alt="people"></img>
+          {/* <img src="/people.webp" alt="people"></img> */}
           <h1>
-            <motion.b whileHover={{ color: "orange" }}>Build </motion.b>
-            Projects
+            <motion.b whileHover={{ color: "#ff48a5" }}>Create </motion.b>
+            Balloon Displays
           </h1>
         </div>
         <div className="title">
           <h1>
-            <motion.b whileHover={{ color: "orange" }}>For Your </motion.b>
-            Business.
+            <motion.b whileHover={{ color: "#ff48a5" }}>for Your </motion.b>
+            Events.
           </h1>
-          <button>Using</button>
+          {/* <button>Using</button> */}
         </div>
       </motion.div>
       <motion.div className="listContainer">
-        {isMobile ? (
+        <motion.b whileHover={{ color: "#ff48a5" }}>
+          "Balloons Nation is a premier balloon decoration company specializing
+          in creating stunning and eye-catching balloon displays for all
+          occasions. From birthday parties to weddings to corporate events, we
+          have the experience and expertise to craft the perfect balloon display
+          for your special event."
+        </motion.b>
+        {/* {isMobile ? (
           <Slider>
             {BoxData.map((e, index) => (
               <div key={index} className="box">
@@ -108,7 +93,7 @@ const Services = () => {
               <img src={e.desc} alt={e.title} />
             </motion.div>
           ))
-        )}
+        )} */}
       </motion.div>
     </motion.div>
   );
