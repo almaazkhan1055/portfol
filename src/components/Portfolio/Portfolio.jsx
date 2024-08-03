@@ -26,7 +26,7 @@ const items = [
     id: 3,
     img: tejasEngineering,
     desc: "Welcome to my portfolio! I'm a skilled web developer with expertise in Vite, Framer Motion, and React. Explore my projects showcasing innovative designs and seamless user experiences. Contact me to discuss how I can bring your web development ideas to life.",
-    title: "Tejas Engineering--(HTMl,CSS,JAVASCRIPT)",
+    title: "Tejas Engineering--(Next js)",
   },
   {
     demo: "https://cashncarry.netlify.app/#",
